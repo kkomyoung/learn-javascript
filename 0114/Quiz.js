@@ -13,7 +13,7 @@ const menuCountSum = orderLunchFoods.reduce(function(accmulator, currentValue){
   return accmulator + currentValue.count;
 }, 0);
 
-console.log(menuCountSum);
+console.log(menuCountSum + '개');
 
 
 
