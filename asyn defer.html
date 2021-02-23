@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 
+    asyn : main.js를 html parsing 하는 동안 병렬로 다운로드
+    다운로드 받는 시간을 절약 가능
+    html이 parsing되기 전에 js가 실행될 수 있고, 조작을 원하는 요소가 아직 정의되어 있지 않을 수 있다.
+    html을 parsing하는 동안에 언제든지 js를 실행하기 위해서 parsing이 중단될 수 있다. 
+
+    먼저 다운로드가 끝난 js부터 무작위로 실행된다.
+  -->
+  <script asyn src="a.js"></script>
+  <script asyn src="b.js"></script>
+  <script asyn src="c.js"></script>
+
+  <!-- 
+    defer : main.js를 html parsing 하는 동안 병렬로 다운로드
+    html을 parsing하는 동안 필요한 js를 받아놓고, 사용자에게 페이지를 보여준 다음에 자바스크립트를 실행한다.
+
+    js 전부 다운로드 한 후 html 파싱이 끝난 뒤 순서대로 실행한다.
+  -->
+  <script defer src="a.js"></script>
+  <script defer src="b.js"></script>
+  <script defer src="c.js"></script>
+</head>
+<body>
+
+</body>
+</html>
