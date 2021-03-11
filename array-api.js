@@ -86,10 +86,19 @@ const students = [
 // Q10. make a string containing all the scores
 // result should be: '45, 80, 90, 66, 88'
 {
-  
-}
+  // const scoreArray = [];
+  let resultArray = students.map((student) => {
+    return student.score;
+  });
+
+  let resultString = resultArray.join();
+  console.log(resultString);
 
 // Bonus! do Q10 sorted in ascending order
 // result should be: '45, 66, 80, 88, 90'
-{
+  resultArray.sort((a, b) => {
+    return a - b;
+  });
+  console.log(resultArray);
+  
 }
